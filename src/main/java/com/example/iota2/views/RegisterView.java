@@ -13,7 +13,7 @@ import com.vaadin.flow.router.Route;
 
 @Route("")
 @NpmPackage(value = "@iota/identity-wasm", version = "0.6")
-@JsModule("@iota/identity-wasm/node/identity_wasm.js")
+@JsModule("@iota/identity-wasm/web/identity_wasm.js")
 //@JsModule("./testJS.js")
 @JsModule("./register.js")
 public class RegisterView extends VerticalLayout {
@@ -43,8 +43,8 @@ public class RegisterView extends VerticalLayout {
     submit.addClickListener(
         event -> UI.getCurrent()
             .getPage()
-            .executeJs("return register.createDid()")
-            .then(r -> System.out.println(r.asString()))
+            .executeJs("return register.createDid")
+            .then(s-> System.out.println(s))
 
     );
 

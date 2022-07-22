@@ -1,4 +1,4 @@
-const {AccountBuilder, ExplorerUrl} = require('@iota/identity-wasm/node')
+const {AccountBuilder, ExplorerUrl} = require('@iota/identity-wasm/web')
 
 window.register = {
 
